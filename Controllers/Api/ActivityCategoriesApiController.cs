@@ -7,11 +7,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ZenithWebsite.Data;
 using ZenithWebsite.Models;
+using Microsoft.AspNetCore.Cors;
 
 namespace ZenithWebsite.Controllers.Api
 {
     [Produces("application/json")]
     [Route("api/ActivityCategoriesApi")]
+    [EnableCors("AllowApi")]
     public class ActivityCategoriesApiController : Controller
     {
         private readonly ApplicationDbContext _context;

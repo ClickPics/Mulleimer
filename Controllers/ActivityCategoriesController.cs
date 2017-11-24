@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ZenithWebsite.Data;
 using ZenithWebsite.Models;
+using System.Web.Http;
 
 namespace ZenithWebsite.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class ActivityCategoriesController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -52,7 +54,7 @@ namespace ZenithWebsite.Controllers
         // POST: ActivityCategories/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
+        [Microsoft.AspNetCore.Mvc.HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ActivityCategoryId,ActivityDescription,CreationDate")] ActivityCategory activityCategory)
         {
@@ -84,7 +86,7 @@ namespace ZenithWebsite.Controllers
         // POST: ActivityCategories/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
+        [System.Web.Http.HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("ActivityCategoryId,ActivityDescription,CreationDate")] ActivityCategory activityCategory)
         {
@@ -135,7 +137,7 @@ namespace ZenithWebsite.Controllers
         }
 
         // POST: ActivityCategories/Delete/5
-        [HttpPost, ActionName("Delete")]
+        [System.Web.Http.HttpPost, Microsoft.AspNetCore.Mvc.ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {

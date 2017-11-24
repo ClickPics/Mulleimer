@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ZenithWebsite.Data;
 using ZenithWebsite.Models;
+using System.Web.Http;
 
 namespace ZenithWebsite.Controllers
 {
+    [Authorize(Roles ="Admin")]
     public class EventsController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -55,7 +57,7 @@ namespace ZenithWebsite.Controllers
         // POST: Events/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
+        [System.Web.Http.HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("EventId,StartDateTime,EndDateTime,Username,CreationDate,IsActive,ActivityCategoryId")] Event @event)
         {
@@ -89,7 +91,7 @@ namespace ZenithWebsite.Controllers
         // POST: Events/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
+        [System.Web.Http.HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("EventId,StartDateTime,EndDateTime,Username,CreationDate,IsActive,ActivityCategoryId")] Event @event)
         {
@@ -142,7 +144,7 @@ namespace ZenithWebsite.Controllers
         }
 
         // POST: Events/Delete/5
-        [HttpPost, ActionName("Delete")]
+        [System.Web.Http.HttpPost, Microsoft.AspNetCore.Mvc.ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
