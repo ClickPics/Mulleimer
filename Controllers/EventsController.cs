@@ -57,7 +57,7 @@ namespace ZenithWebsite.Controllers
         // POST: Events/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [System.Web.Http.HttpPost]
+        [Microsoft.AspNetCore.Mvc.HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("EventId,StartDateTime,EndDateTime,Username,CreationDate,IsActive,ActivityCategoryId")] Event @event)
         {
@@ -91,7 +91,7 @@ namespace ZenithWebsite.Controllers
         // POST: Events/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [System.Web.Http.HttpPost]
+        [Microsoft.AspNetCore.Mvc.HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("EventId,StartDateTime,EndDateTime,Username,CreationDate,IsActive,ActivityCategoryId")] Event @event)
         {
