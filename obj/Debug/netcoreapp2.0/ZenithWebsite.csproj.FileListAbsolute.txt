@@ -5,8 +5,8 @@ C:\FourthTerm\ASP\ZenithWebsite\bin\Debug\netcoreapp2.0\ZenithWebsite.dll
 C:\FourthTerm\ASP\ZenithWebsite\bin\Debug\netcoreapp2.0\ZenithWebsite.pdb
 C:\FourthTerm\ASP\ZenithWebsite\obj\Debug\netcoreapp2.0\ZenithWebsite.csprojResolveAssemblyReference.cache
 C:\FourthTerm\ASP\ZenithWebsite\obj\Debug\netcoreapp2.0\ZenithWebsite.csproj.CoreCompileInputs.cache
-C:\FourthTerm\ASP\ZenithWebsite\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
 C:\FourthTerm\ASP\ZenithWebsite\obj\Debug\netcoreapp2.0\ZenithWebsite.AssemblyInfoInputs.cache
 C:\FourthTerm\ASP\ZenithWebsite\obj\Debug\netcoreapp2.0\ZenithWebsite.AssemblyInfo.cs
 C:\FourthTerm\ASP\ZenithWebsite\obj\Debug\netcoreapp2.0\ZenithWebsite.dll
 C:\FourthTerm\ASP\ZenithWebsite\obj\Debug\netcoreapp2.0\ZenithWebsite.pdb
+C:\FourthTerm\ASP\ZenithWebsite\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs

@@ -12,6 +12,8 @@ using ZenithWebsite.Data;
 using ZenithWebsite.Models;
 using ZenithWebsite.Services;
 using ZenithWebsite.Data.Migrations;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Cors.Internal;
 
 namespace ZenithWebsite
 {
@@ -38,6 +40,15 @@ namespace ZenithWebsite
             services.AddTransient<IEmailSender, EmailSender>();
 
             services.AddMvc();
+
+            services.AddCors(c => c.AddPolicy("AllowApi", builder =>
+             {
+                 builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+             }));
+            //services.Configure<MvcOptions>(options =>
+            //{
+            //    options.Filters.Add(new CorsAuthorizationFilterFactory("AllowSpecificOrigin"));
+            //});
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
