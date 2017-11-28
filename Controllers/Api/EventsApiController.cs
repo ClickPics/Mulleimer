@@ -26,7 +26,7 @@ namespace ZenithWebsite.Controllers.Api
 
         // GET: api/EventsApi
         [HttpGet]
-        public Dictionary<string, List<Event>> GetEvents()
+        public List<DateandEventsModel> GetEvents()
         {
             var dates = GetDaysOfCurrentWeek();
             List<ApiEventModel> apiEvents = new List<ApiEventModel>();
@@ -36,20 +36,31 @@ namespace ZenithWebsite.Controllers.Api
             // Sort the events by date time
             events.Sort((x, y) => x.StartDateTime.CompareTo(y.StartDateTime));
 
-            Dictionary<string, List<Event>> dic = new Dictionary<string, List<Event>>();
+            List<DateandEventsModel> datesEvents = new List<DateandEventsModel>();
             foreach (var d in dates)
             {
-                dic.Add(d.ToString("D", new CultureInfo("EN-US")), new List<Event>());
+                DateandEventsModel currentModel = new DateandEventsModel();
+                currentModel.DayOfWeek = (d.ToString("D", new CultureInfo("EN-US")));
+                currentModel.Events = new List<ApiEventModel>();
                 foreach (var e in events)
                 {
                     if (e.StartDateTime.Date == d.Date)
                     {
-                        dic[d.ToString("D", new CultureInfo("EN-US"))].Add(e);
+                       currentModel.Events.Add(new ApiEventModel {
+                            Username = e.Username,
+                            EndDateTime = e.EndDateTime,
+                            EventId = e.EventId,
+                            CreationDate = e.CreationDate,
+                            IsActive = e.IsActive,
+                            StartDateTime = e.StartDateTime,
+                            ActivityCategory = _context.ActivityCategories.Find(e.ActivityCategoryId).ActivityDescription
+                        });
                     }
                 }
+                datesEvents.Add(currentModel);
             }
 
-            return dic;
+            return datesEvents;
             //foreach (var e in allEvents)
             //{
             //    apiEvents.Add(new ApiEventModel
