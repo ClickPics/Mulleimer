@@ -26,12 +26,22 @@ namespace ZenithWebsite.Controllers.Api
 
         // GET: api/EventsApi
         [HttpGet]
-        public List<DateandEventsModel> GetEvents()
+        public List<DateandEventsModel> GetEvents([FromQuery] string startDate)
         {
-            var dates = GetDaysOfCurrentWeek();
+            DateTime start       = new DateTime();
+            List<DateTime> dates = null;
+            bool tryStart        = false;
+
+            if (!startDate.Equals(""))
+            {
+                tryStart = DateTime.TryParse(startDate, out start);
+            }
+
+            dates = tryStart ? GetDaysOfCurrentWeekFromStart(start) : GetDaysOfCurrentWeek();
+
             List<ApiEventModel> apiEvents = new List<ApiEventModel>();
             var allEvents = _context.Events;
-            var events = _context.Events.Include(e => e.ActivityCategory).Where(e => e.IsActive == true).ToList();
+            var events    = _context.Events.Include(e => e.ActivityCategory).Where(e => e.IsActive == true).ToList();
 
             // Sort the events by date time
             events.Sort((x, y) => x.StartDateTime.CompareTo(y.StartDateTime));
@@ -77,6 +87,7 @@ namespace ZenithWebsite.Controllers.Api
             //return apiEvents;
             
         }
+
         public static List<DateTime> GetDaysOfCurrentWeek()
         {
             DateTime startOfWeek = DateTime.Today.AddDays(
@@ -90,6 +101,12 @@ namespace ZenithWebsite.Controllers.Api
             return result;
             
         }
+
+        public static List<DateTime> GetDaysOfCurrentWeekFromStart(DateTime start)
+        {
+            return Enumerable.Range(0,7).Select(i => start.AddDays(i)).ToList<DateTime>();
+        }
+
         // GET: api/EventsApi/5
         [HttpGet("{id}")]
         public async Task<IActionResult> GetEvent([FromRoute] int id)
