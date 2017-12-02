@@ -137,7 +137,7 @@ namespace ZenithWebsite.Controllers
         }
 
         // POST: ActivityCategories/Delete/5
-        [System.Web.Http.HttpPost, Microsoft.AspNetCore.Mvc.ActionName("Delete")]
+        [System.Web.Http.HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {

@@ -48,8 +48,8 @@
             @Html.DisplayFor(model => model.ActivityCategory.ActivityCategoryId)
         </dd>
     </dl>
-    
-    <form asp-action="Delete">
+
+    <form asp-action="DeleteConfirmed" asp-route-id="@Model.EventId">
         <input type="hidden" asp-for="EventId" />
         <input type="submit" value="Delete" class="btn btn-default" /> |
         <a asp-action="Index">Back to List</a>

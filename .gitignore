@@ -1,0 +1,4 @@
+bin/
+obj/
+.vscode
+zenith.db
