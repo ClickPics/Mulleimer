@@ -125,7 +125,8 @@ namespace ZenithWebsite.Controllers
         }
 
         // GET: Events/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        [System.Web.Http.HttpGet]
+        public async Task<IActionResult> Delete(int id)
         {
             if (id == null)
             {
@@ -144,7 +145,7 @@ namespace ZenithWebsite.Controllers
         }
 
         // POST: Events/Delete/5
-        [System.Web.Http.HttpPost, Microsoft.AspNetCore.Mvc.ActionName("Delete")]
+        [System.Web.Http.HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {

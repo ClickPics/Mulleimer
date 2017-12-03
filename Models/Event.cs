@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
+using ZenithWebsite.Validation;
 
 namespace ZenithWebsite.Models
 {
@@ -17,7 +18,7 @@ namespace ZenithWebsite.Models
         public DateTime StartDateTime { get; set; }
 
         [Display(Name = "End Time")]
-        //[DateValidation]
+        [DateValidation]
         public DateTime EndDateTime { get; set; }
 
         [Display(Name = "Created By")]

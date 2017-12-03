@@ -325,6 +325,287 @@ namespace ZenithWebsite.Data.Migrations
                     IsActive = true,
                     ActivityCategoryId = context.ActivityCategories.FirstOrDefault(
                         a => a.ActivityCategoryId == 13).ActivityCategoryId},
+                new Event() { StartDateTime= new DateTime(2017, 11, 29, 12, 00, 00),
+                    EndDateTime = new DateTime(2017, 10, 22, 15, 00, 00),
+                    Username = "a",
+                    CreationDate = DateTime.Now,
+                    IsActive = true,
+                    ActivityCategoryId = context.ActivityCategories.FirstOrDefault(
+                        a => a.ActivityCategoryId == 7).ActivityCategoryId},
+                new Event() { StartDateTime= new DateTime(2017, 11, 30, 15, 00, 00),
+                    EndDateTime = new DateTime(2017, 10, 22, 18, 00, 00),
+                    Username = "a",
+                    CreationDate = DateTime.Now,
+                    IsActive = true,
+                    ActivityCategoryId = context.ActivityCategories.FirstOrDefault(
+                        a => a.ActivityCategoryId == 8).ActivityCategoryId},
+                new Event() { StartDateTime= new DateTime(2017, 12, 2, 8, 00, 00),
+                    EndDateTime = new DateTime(2017, 10, 22, 15, 00, 00),
+                    Username = "a",
+                    CreationDate = DateTime.Now,
+                    IsActive = true,
+                    ActivityCategoryId = context.ActivityCategories.FirstOrDefault(
+                        a => a.ActivityCategoryId == 3).ActivityCategoryId},
+                new Event() { StartDateTime= new DateTime(2017, 12, 3, 10, 00, 00),
+                    EndDateTime = new DateTime(2017, 10, 22, 18, 00, 00),
+                    Username = "a",
+                    CreationDate = DateTime.Now,
+                    IsActive = true,
+                    ActivityCategoryId = context.ActivityCategories.FirstOrDefault(
+                        a => a.ActivityCategoryId == 4).ActivityCategoryId},
+                new Event() { StartDateTime= new DateTime(2017, 12, 5, 8, 00, 00),
+                    EndDateTime = new DateTime(2017, 12, 5, 11, 00, 00),
+                    Username = "a",
+                    CreationDate = DateTime.Now,
+                    IsActive = true,
+                    ActivityCategoryId = context.ActivityCategories.FirstOrDefault(
+                        a => a.ActivityCategoryId == 1).ActivityCategoryId},
+                
+                new Event() { StartDateTime= new DateTime(2017, 12, 5, 16, 00, 00),
+                    EndDateTime = new DateTime(2017, 12, 5, 19, 00, 00),
+                    Username = "a",
+                    CreationDate = DateTime.Now,
+                    IsActive = true,
+                    ActivityCategoryId = context.ActivityCategories.FirstOrDefault(
+                        a => a.ActivityCategoryId == 4).ActivityCategoryId},
+                new Event() { StartDateTime= new DateTime(2017, 12, 6, 14, 00, 00),
+                    EndDateTime = new DateTime(2017, 12, 6, 16, 00, 00),
+                    Username = "a",
+                    CreationDate = DateTime.Now,
+                    IsActive = true,
+                    ActivityCategoryId = context.ActivityCategories.FirstOrDefault(
+                        a => a.ActivityCategoryId == 9).ActivityCategoryId},
+                new Event() { StartDateTime= new DateTime(2017, 12, 6, 17, 00, 00),
+                    EndDateTime = new DateTime(2017, 12, 6, 18, 30, 00),
+                    Username = "a",
+                    CreationDate = DateTime.Now,
+                    IsActive = true,
+                    ActivityCategoryId = context.ActivityCategories.FirstOrDefault(
+                        a => a.ActivityCategoryId == 5).ActivityCategoryId},
+                new Event() { StartDateTime= new DateTime(2017, 12, 6, 8, 00, 00),
+                    EndDateTime = new DateTime(2017, 12, 6, 10, 00, 00),
+                    Username = "a",
+                    CreationDate = DateTime.Now,
+                    IsActive = true,
+                    ActivityCategoryId = context.ActivityCategories.FirstOrDefault(
+                        a => a.ActivityCategoryId == 10).ActivityCategoryId},
+                new Event() { StartDateTime= new DateTime(2017, 12, 6, 21, 00, 00),
+                    EndDateTime = new DateTime(2017, 12, 6, 22, 30, 00),
+                    Username = "a",
+                    CreationDate = DateTime.Now,
+                    IsActive = true,
+                    ActivityCategoryId = context.ActivityCategories.FirstOrDefault(
+                        a => a.ActivityCategoryId == 8).ActivityCategoryId},
+                new Event() { StartDateTime= new DateTime(2017, 12, 7, 13, 00, 00),
+                    EndDateTime = new DateTime(2017, 12, 7, 15, 00, 00),
+                    Username = "a",
+                    CreationDate = DateTime.Now,
+                    IsActive = true,
+                    ActivityCategoryId = context.ActivityCategories.FirstOrDefault(
+                        a => a.ActivityCategoryId == 3).ActivityCategoryId},
+                new Event() { StartDateTime= new DateTime(2017, 12, 8, 9, 00, 00),
+                    EndDateTime = new DateTime(2017, 12, 8, 10, 30, 00),
+                    Username = "a",
+                    CreationDate = DateTime.Now,
+                    IsActive = true,
+                    ActivityCategoryId = context.ActivityCategories.FirstOrDefault(
+                        a => a.ActivityCategoryId == 4).ActivityCategoryId},
+                new Event() { StartDateTime= new DateTime(2017, 12, 10, 9, 00, 00),
+                    EndDateTime = new DateTime(2017, 12, 10, 11, 30, 00),
+                    Username = "a",
+                    CreationDate = DateTime.Now,
+                    IsActive = true,
+                    ActivityCategoryId = context.ActivityCategories.FirstOrDefault(
+                        a => a.ActivityCategoryId == 2).ActivityCategoryId},
+                new Event() { StartDateTime= new DateTime(2017, 12, 10, 17, 00, 00),
+                    EndDateTime = new DateTime(2017, 12, 10, 18, 30, 00),
+                    Username = "a",
+                    CreationDate = DateTime.Now,
+                    IsActive = true,
+                    ActivityCategoryId = context.ActivityCategories.FirstOrDefault(
+                        a => a.ActivityCategoryId == 7).ActivityCategoryId},
+                new Event() { StartDateTime= new DateTime(2017, 12, 10, 22, 00, 00),
+                    EndDateTime = new DateTime(2017, 12, 10, 23, 30, 00),
+                    Username = "a",
+                    CreationDate = DateTime.Now,
+                    IsActive = true,
+                    ActivityCategoryId = context.ActivityCategories.FirstOrDefault(
+                        a => a.ActivityCategoryId == 13).ActivityCategoryId},
+
+
+
+                new Event() { StartDateTime= new DateTime(2017, 12, 12, 9, 00, 00),
+                    EndDateTime = new DateTime(2017, 12, 12, 10, 30, 00),
+                    Username = "a",
+                    CreationDate = DateTime.Now,
+                    IsActive = true,
+                    ActivityCategoryId = context.ActivityCategories.FirstOrDefault(
+                        a => a.ActivityCategoryId == 4).ActivityCategoryId},
+                new Event() { StartDateTime= new DateTime(2017, 12, 12, 13, 00, 00),
+                    EndDateTime = new DateTime(2017, 12, 12, 14, 00, 00),
+                    Username = "a",
+                    CreationDate = DateTime.Now,
+                    IsActive = true,
+                    ActivityCategoryId = context.ActivityCategories.FirstOrDefault(
+                        a => a.ActivityCategoryId == 2).ActivityCategoryId},
+                new Event() { StartDateTime= new DateTime(2017, 12, 12, 17, 00, 00),
+                    EndDateTime = new DateTime(2017, 12, 10, 18, 30, 00),
+                    Username = "a",
+                    CreationDate = DateTime.Now,
+                    IsActive = true,
+                    ActivityCategoryId = context.ActivityCategories.FirstOrDefault(
+                        a => a.ActivityCategoryId == 7).ActivityCategoryId},
+                new Event() { StartDateTime= new DateTime(2017, 12, 14, 22, 00, 00),
+                    EndDateTime = new DateTime(2017, 12, 14, 23, 30, 00),
+                    Username = "a",
+                    CreationDate = DateTime.Now,
+                    IsActive = true,
+                    ActivityCategoryId = context.ActivityCategories.FirstOrDefault(
+                        a => a.ActivityCategoryId == 13).ActivityCategoryId},
+
+
+
+                new Event() { StartDateTime= new DateTime(2017, 12, 13, 9, 00, 00),
+                    EndDateTime = new DateTime(2017, 12, 13, 10, 30, 00),
+                    Username = "a",
+                    CreationDate = DateTime.Now,
+                    IsActive = true,
+                    ActivityCategoryId = context.ActivityCategories.FirstOrDefault(
+                        a => a.ActivityCategoryId == 10).ActivityCategoryId},
+                new Event() { StartDateTime= new DateTime(2017, 12, 13, 13, 00, 00),
+                    EndDateTime = new DateTime(2017, 12, 13, 14, 00, 00),
+                    Username = "a",
+                    CreationDate = DateTime.Now,
+                    IsActive = true,
+                    ActivityCategoryId = context.ActivityCategories.FirstOrDefault(
+                        a => a.ActivityCategoryId == 8).ActivityCategoryId},
+                new Event() { StartDateTime= new DateTime(2017, 12, 13, 17, 00, 00),
+                    EndDateTime = new DateTime(2017, 12, 13, 18, 30, 00),
+                    Username = "a",
+                    CreationDate = DateTime.Now,
+                    IsActive = true,
+                    ActivityCategoryId = context.ActivityCategories.FirstOrDefault(
+                        a => a.ActivityCategoryId == 7).ActivityCategoryId},
+                new Event() { StartDateTime= new DateTime(2017, 12, 13, 22, 00, 00),
+                    EndDateTime = new DateTime(2017, 12, 13, 23, 30, 00),
+                    Username = "a",
+                    CreationDate = DateTime.Now,
+                    IsActive = true,
+                    ActivityCategoryId = context.ActivityCategories.FirstOrDefault(
+                        a => a.ActivityCategoryId == 2).ActivityCategoryId},
+
+
+                new Event() { StartDateTime= new DateTime(2017, 12, 18, 17, 00, 00),
+                    EndDateTime = new DateTime(2017, 12, 18, 18, 30, 00),
+                    Username = "a",
+                    CreationDate = DateTime.Now,
+                    IsActive = true,
+                    ActivityCategoryId = context.ActivityCategories.FirstOrDefault(
+                        a => a.ActivityCategoryId == 11).ActivityCategoryId},
+                new Event() { StartDateTime= new DateTime(2017, 12, 18, 22, 00, 00),
+                    EndDateTime = new DateTime(2017, 12, 18, 23, 30, 00),
+                    Username = "a",
+                    CreationDate = DateTime.Now,
+                    IsActive = true,
+                    ActivityCategoryId = context.ActivityCategories.FirstOrDefault(
+                        a => a.ActivityCategoryId == 12).ActivityCategoryId},
+
+
+                new Event() { StartDateTime= new DateTime(2017, 12, 19, 7, 00, 00),
+                    EndDateTime = new DateTime(2017, 12, 19, 8, 30, 00),
+                    Username = "a",
+                    CreationDate = DateTime.Now,
+                    IsActive = true,
+                    ActivityCategoryId = context.ActivityCategories.FirstOrDefault(
+                        a => a.ActivityCategoryId == 1).ActivityCategoryId},
+                new Event() { StartDateTime= new DateTime(2017, 12, 19, 9, 00, 00),
+                    EndDateTime = new DateTime(2017, 12, 19, 11, 30, 00),
+                    Username = "a",
+                    CreationDate = DateTime.Now,
+                    IsActive = true,
+                    ActivityCategoryId = context.ActivityCategories.FirstOrDefault(
+                        a => a.ActivityCategoryId == 2).ActivityCategoryId},
+                new Event() { StartDateTime= new DateTime(2017, 12, 19, 14, 00, 00),
+                    EndDateTime = new DateTime(2017, 12, 19, 16, 30, 00),
+                    Username = "a",
+                    CreationDate = DateTime.Now,
+                    IsActive = true,
+                    ActivityCategoryId = context.ActivityCategories.FirstOrDefault(
+                        a => a.ActivityCategoryId == 3).ActivityCategoryId},
+                new Event() { StartDateTime= new DateTime(2017, 12, 19, 18, 00, 00),
+                    EndDateTime = new DateTime(2017, 12, 19, 20, 00, 00),
+                    Username = "a",
+                    CreationDate = DateTime.Now,
+                    IsActive = true,
+                    ActivityCategoryId = context.ActivityCategories.FirstOrDefault(
+                        a => a.ActivityCategoryId == 4).ActivityCategoryId},
+
+                new Event() { StartDateTime= new DateTime(2017, 12, 20, 7, 00, 00),
+                    EndDateTime = new DateTime(2017, 12, 20, 8, 30, 00),
+                    Username = "a",
+                    CreationDate = DateTime.Now,
+                    IsActive = true,
+                    ActivityCategoryId = context.ActivityCategories.FirstOrDefault(
+                        a => a.ActivityCategoryId == 6).ActivityCategoryId},
+
+                new Event() { StartDateTime= new DateTime(2017, 12, 21, 14, 00, 00),
+                    EndDateTime = new DateTime(2017, 12, 21, 16, 30, 00),
+                    Username = "a",
+                    CreationDate = DateTime.Now,
+                    IsActive = true,
+                    ActivityCategoryId = context.ActivityCategories.FirstOrDefault(
+                        a => a.ActivityCategoryId == 9).ActivityCategoryId},
+                new Event() { StartDateTime= new DateTime(2017, 12, 21, 18, 00, 00),
+                    EndDateTime = new DateTime(2017, 12, 21, 20, 00, 00),
+                    Username = "a",
+                    CreationDate = DateTime.Now,
+                    IsActive = true,
+                    ActivityCategoryId = context.ActivityCategories.FirstOrDefault(
+                        a => a.ActivityCategoryId == 10).ActivityCategoryId},
+
+                new Event() { StartDateTime= new DateTime(2017, 12, 22, 8, 00, 00),
+                    EndDateTime = new DateTime(2017, 12, 22, 9, 30, 00),
+                    Username = "a",
+                    CreationDate = DateTime.Now,
+                    IsActive = true,
+                    ActivityCategoryId = context.ActivityCategories.FirstOrDefault(
+                        a => a.ActivityCategoryId == 9).ActivityCategoryId},
+                new Event() { StartDateTime= new DateTime(2017, 12, 22, 11, 00, 00),
+                    EndDateTime = new DateTime(2017, 12, 22, 12, 00, 00),
+                    Username = "a",
+                    CreationDate = DateTime.Now,
+                    IsActive = true,
+                    ActivityCategoryId = context.ActivityCategories.FirstOrDefault(
+                        a => a.ActivityCategoryId == 10).ActivityCategoryId},
+                new Event() { StartDateTime= new DateTime(2017, 12, 22, 14, 00, 00),
+                    EndDateTime = new DateTime(2017, 12, 22, 16, 30, 00),
+                    Username = "a",
+                    CreationDate = DateTime.Now,
+                    IsActive = true,
+                    ActivityCategoryId = context.ActivityCategories.FirstOrDefault(
+                        a => a.ActivityCategoryId == 11).ActivityCategoryId},
+                new Event() { StartDateTime= new DateTime(2017, 12, 22, 18, 00, 00),
+                    EndDateTime = new DateTime(2017, 12, 22, 20, 00, 00),
+                    Username = "a",
+                    CreationDate = DateTime.Now,
+                    IsActive = true,
+                    ActivityCategoryId = context.ActivityCategories.FirstOrDefault(
+                        a => a.ActivityCategoryId == 12).ActivityCategoryId},
+                
+                new Event() { StartDateTime= new DateTime(2017, 12, 27, 14, 00, 00),
+                    EndDateTime = new DateTime(2017, 12, 27, 16, 30, 00),
+                    Username = "a",
+                    CreationDate = DateTime.Now,
+                    IsActive = true,
+                    ActivityCategoryId = context.ActivityCategories.FirstOrDefault(
+                        a => a.ActivityCategoryId == 1).ActivityCategoryId},
+                new Event() { StartDateTime= new DateTime(2017, 12, 28, 18, 00, 00),
+                    EndDateTime = new DateTime(2017, 12, 28, 20, 00, 00),
+                    Username = "a",
+                    CreationDate = DateTime.Now,
+                    IsActive = true,
+                    ActivityCategoryId = context.ActivityCategories.FirstOrDefault(
+                        a => a.ActivityCategoryId == 2).ActivityCategoryId}
             };
             return events;
         }
