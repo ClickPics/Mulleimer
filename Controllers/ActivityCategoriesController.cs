@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ZenithWebsite.Data;
 using ZenithWebsite.Models;
+using Microsoft.Extensions.Localization;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Http;
 
 namespace ZenithWebsite.Controllers
 {
@@ -14,9 +17,22 @@ namespace ZenithWebsite.Controllers
     {
         private readonly ApplicationDbContext _context;
 
-        public ActivityCategoriesController(ApplicationDbContext context)
+        private readonly IStringLocalizer<ActivityCategoriesController> _localizer;
+        public ActivityCategoriesController(ApplicationDbContext context, IStringLocalizer<ActivityCategoriesController> localizer)
         {
+            _localizer = localizer;
             _context = context;
+        }
+        [HttpPost]
+        public IActionResult SetLanguage(string culture, string returnUrl)
+        {
+            Response.Cookies.Append(
+                CookieRequestCultureProvider.DefaultCookieName,
+                CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
+                new CookieOptions { Expires = DateTimeOffset.UtcNow.AddDays(1) }
+            );
+
+            return LocalRedirect(returnUrl);
         }
 
         // GET: ActivityCategories
@@ -46,6 +62,7 @@ namespace ZenithWebsite.Controllers
         // GET: ActivityCategories/Create
         public IActionResult Create()
         {
+            ViewData["Message"] = _localizer["Your application description page."];
             return View();
         }
 

@@ -12,6 +12,9 @@ using ZenithWebsite.Data;
 using ZenithWebsite.Models;
 using ZenithWebsite.Services;
 using ZenithWebsite.Data.Migrations;
+using System.Globalization;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.Extensions.Options;
 
 namespace ZenithWebsite
 {
@@ -34,6 +37,26 @@ namespace ZenithWebsite
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
+            services.Configure<RequestLocalizationOptions>(opts => {
+                var supportedCultures = new List<CultureInfo> {
+                    new CultureInfo("en"),
+                    new CultureInfo("en-US"),
+                    new CultureInfo("fr"),
+                    new CultureInfo("fr-FR"),
+                    new CultureInfo("zh-CN"),   // Chinese China
+                    new CultureInfo("ar-EG"),   // Arabic Egypt
+                    new CultureInfo("ko-KR"),   // Korea
+                    new CultureInfo("es-SV"),   // El-Salvador
+                  };
+
+                opts.DefaultRequestCulture = new RequestCulture("en-US");
+                // Formatting numbers, dates, etc.
+                opts.SupportedCultures = supportedCultures;
+                // UI strings that we have localized.
+                opts.SupportedUICultures = supportedCultures;
+            });
+
+
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
 
@@ -54,7 +77,8 @@ namespace ZenithWebsite
             }
 
             app.UseStaticFiles();
-
+            var options = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();
+            app.UseRequestLocalization(options.Value);
             app.UseAuthentication();
 
             app.UseMvc(routes =>
