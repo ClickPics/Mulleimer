@@ -7,9 +7,10 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ZenithWebsite.Data;
 using ZenithWebsite.Models;
-using Microsoft.Extensions.Localization;
+
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Localization;
 
 namespace ZenithWebsite.Controllers
 {
@@ -62,7 +63,7 @@ namespace ZenithWebsite.Controllers
         // GET: ActivityCategories/Create
         public IActionResult Create()
         {
-            ViewData["Message"] = _localizer["Your application description page."];
+            ViewData["Title"] = _localizer["Create"];
             return View();
         }
 

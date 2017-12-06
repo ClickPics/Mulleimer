@@ -15,6 +15,9 @@ using ZenithWebsite.Data.Migrations;
 using System.Globalization;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Options;
+using Microsoft.Extensions.Localization;
+using Microsoft.Extensions.DependencyInjection.Extensions;
+using Microsoft.AspNetCore.Mvc.Razor;
 
 namespace ZenithWebsite
 {
@@ -36,6 +39,23 @@ namespace ZenithWebsite
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
+            services.AddLocalization(opts => {
+                opts.ResourcesPath = "Resources";
+            });
+
+
+            //services.TryAddSingleton<IStringLocalizer, IStringLocalizer>();
+            
+
+
+            // Add application services.
+            services.AddTransient<IEmailSender, EmailSender>();
+
+            services.AddMvc()
+                .AddViewLocalization(
+                    opts => { opts.ResourcesPath = "Resources"; })
+                .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
+                .AddDataAnnotationsLocalization();
 
             services.Configure<RequestLocalizationOptions>(opts => {
                 var supportedCultures = new List<CultureInfo> {
@@ -55,12 +75,6 @@ namespace ZenithWebsite
                 // UI strings that we have localized.
                 opts.SupportedUICultures = supportedCultures;
             });
-
-
-            // Add application services.
-            services.AddTransient<IEmailSender, EmailSender>();
-
-            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -77,8 +91,10 @@ namespace ZenithWebsite
             }
 
             app.UseStaticFiles();
+
             var options = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();
             app.UseRequestLocalization(options.Value);
+
             app.UseAuthentication();
 
             app.UseMvc(routes =>

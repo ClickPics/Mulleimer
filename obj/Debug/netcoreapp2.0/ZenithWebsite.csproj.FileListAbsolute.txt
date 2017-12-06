@@ -10,7 +10,7 @@ C:\FourthTerm\ASP\ZenithWebsite\obj\Debug\netcoreapp2.0\ZenithWebsite.AssemblyIn
 C:\FourthTerm\ASP\ZenithWebsite\obj\Debug\netcoreapp2.0\ZenithWebsite.AssemblyInfo.cs
 C:\FourthTerm\ASP\ZenithWebsite\obj\Debug\netcoreapp2.0\ZenithWebsite.dll
 C:\FourthTerm\ASP\ZenithWebsite\obj\Debug\netcoreapp2.0\ZenithWebsite.pdb
-C:\FourthTerm\ASP\ZenithWebsite\bin\Debug\netcoreapp2.0\hi-IN\ZenithWebsite.resources.dll
-C:\FourthTerm\ASP\ZenithWebsite\obj\Debug\netcoreapp2.0\ZenithWebsite.Resources.Resource.hi-IN.resources
+C:\FourthTerm\ASP\ZenithWebsite\bin\Debug\netcoreapp2.0\fr-FR\ZenithWebsite.resources.dll
+C:\FourthTerm\ASP\ZenithWebsite\obj\Debug\netcoreapp2.0\ZenithWebsite.Resources.Views.ActivityCategories.Create.fr-FR.resources
 C:\FourthTerm\ASP\ZenithWebsite\obj\Debug\netcoreapp2.0\ZenithWebsite.csproj.GenerateResource.Cache
-C:\FourthTerm\ASP\ZenithWebsite\obj\Debug\netcoreapp2.0\hi-IN\ZenithWebsite.resources.dll
+C:\FourthTerm\ASP\ZenithWebsite\obj\Debug\netcoreapp2.0\fr-FR\ZenithWebsite.resources.dll
