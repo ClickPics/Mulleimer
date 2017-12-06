@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Resources\Controllers\" />
+    <None Include="Resources\Controllers\ActivityCategoriesController.fr-FR.resx" />
   </ItemGroup>
 
   <ItemGroup>

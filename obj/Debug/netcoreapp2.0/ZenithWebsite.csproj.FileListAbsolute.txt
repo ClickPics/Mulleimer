@@ -14,3 +14,4 @@ C:\FourthTerm\ASP\ZenithWebsite\bin\Debug\netcoreapp2.0\fr-FR\ZenithWebsite.reso
 C:\FourthTerm\ASP\ZenithWebsite\obj\Debug\netcoreapp2.0\ZenithWebsite.Resources.Views.ActivityCategories.Create.fr-FR.resources
 C:\FourthTerm\ASP\ZenithWebsite\obj\Debug\netcoreapp2.0\ZenithWebsite.csproj.GenerateResource.Cache
 C:\FourthTerm\ASP\ZenithWebsite\obj\Debug\netcoreapp2.0\fr-FR\ZenithWebsite.resources.dll
+C:\FourthTerm\ASP\ZenithWebsite\obj\Debug\netcoreapp2.0\ZenithWebsite.Resources.Controllers.ActivityCategoriesController.fr-FR.resources

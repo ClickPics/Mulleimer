@@ -63,7 +63,7 @@ namespace ZenithWebsite.Controllers
         // GET: ActivityCategories/Create
         public IActionResult Create()
         {
-            ViewData["Title"] = _localizer["Create"];
+            ViewData["Message"] = _localizer["Create"];
             return View();
         }
 
